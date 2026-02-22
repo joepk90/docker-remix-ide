@@ -6,3 +6,21 @@ services:
     container_name: remixide
     ports:
       - "8080:80"
+    networks:
+      - remixnet
+
+  remixd:
+    image: node:20
+    container_name: remixd
+    working_dir: /workspace
+    command: >
+      sh -c "npm install -g @remix-project/remixd@0.5.3 &&
+             remixd -s /workspace --remix-ide http://localhost:8080"
+    volumes:
+      - ./:/workspace
+    ports:
+      - "65520:65520"
+
+networks:
+  remixnet:
+    driver: bridge
