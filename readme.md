@@ -1,6 +1,8 @@
 # Docker Remix IDE
 Remix IDE setup using Docker. Useful for following Solidity Tutorials and tracking the code via git.
 
+The intention of this project was reo remplicate Remix's IDE Locally:
+[https://remix.ethereum.org](https://remix.ethereum.org)
 
 ## Project Setup
 
@@ -26,3 +28,7 @@ Go [http://localhost:8080](http://localhost:8080) to view Remix IDE in the brows
 From here, either use the IDE to test contracts, or Connect to Localhost to use your local file system - the contracts and scripts stored in this project.
 
 In order for Localhost to work, `remixd` must be running.
+
+
+## Reference Links:
+- https://github.com/remix-project-org/remix-project/blob/master/docker-compose.yaml
