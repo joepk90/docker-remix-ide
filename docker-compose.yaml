@@ -2,7 +2,9 @@ version: "3.8"
 
 services:
   remixide:
-    image: remixproject/remix-ide:latest
+    # sha256 hash used in case latest is updated/changes/breaks in the future (no versioning used for this image)
+    image: remixproject/remix-ide@sha256:a662f62b15c96add414d48a45c2f6eb2049c5c920b72207097a5a9a264bede5f
+    # image: remixproject/remix-ide@sha256:latest
     container_name: remixide
     ports:
       - "8080:80"
